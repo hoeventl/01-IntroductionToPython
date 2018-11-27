@@ -10,7 +10,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 ########################################################################
 
 ########################################################################
-# TODO: 2.
+# DONE: 2.
 #   You should have RUN the  m5e_loopy_turtles  module and READ its code.
 #   (Do so now if you have not already done so.)
 #
@@ -31,10 +31,34 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 import rosegraphics as rg
 window = rg.TurtleWindow()
 Dante = rg.SimpleTurtle('turtle')
-Dante.pen = rg.Pen('black',5)
-for k in range(10):
+Dante.pen = rg.Pen('purple',5)
+Dante.speed = 10
+
+for k in range(8):
 
     Dante.draw_regular_polygon(7,100)
     Dante.right(45)
     Dante.forward(30)
+
+Alex = rg.SimpleTurtle('triangle')
+Alex.pen = rg.Pen('blue',2)
+Alex.speed = 20
+Alex.pen_up()
+Alex.forward(200)
+Alex.left(90)
+Alex.forward(50)
+Alex.pen_down()
+
+for k in range(9):
+    Alex.pen_up()
+    Alex.left(40)
+    Alex.forward(50)
+    Alex.pen_down()
+    for k in range(7):
+        Alex.pen_up()
+        Alex.forward(15)
+        Alex.pen_down()
+        Alex.draw_circle(5)
+
+window.close_on_mouse_click()
 
