@@ -61,4 +61,3 @@ for k in range(9):
         Alex.draw_circle(5)
 
 window.close_on_mouse_click()
-
